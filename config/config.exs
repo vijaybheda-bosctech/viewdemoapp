@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :viewdemoapp,
-  ecto_repos: [Viewdemoapp.Repo]
+config :user_crud_app,
+  ecto_repos: [UserCrudApp.Repo]
 
 # Configures the endpoint
-config :viewdemoapp, ViewdemoappWeb.Endpoint,
+config :user_crud_app, UserCrudAppWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: ViewdemoappWeb.ErrorHTML, json: ViewdemoappWeb.ErrorJSON],
+    formats: [html: UserCrudAppWeb.ErrorHTML, json: UserCrudAppWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Viewdemoapp.PubSub,
+  pubsub_server: UserCrudApp.PubSub,
   live_view: [signing_salt: "Cx/0lFfj"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :viewdemoapp, ViewdemoappWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :viewdemoapp, Viewdemoapp.Mailer, adapter: Swoosh.Adapters.Local
+config :user_crud_app, UserCrudApp.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :viewdemoapp, Viewdemoapp.Repo,
+config :user_crud_app, UserCrudApp.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "viewdemoapp_dev",
+  database: "user_crud_app_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :viewdemoapp, Viewdemoapp.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :viewdemoapp, ViewdemoappWeb.Endpoint,
+config :user_crud_app, UserCrudAppWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -53,17 +53,17 @@ config :viewdemoapp, ViewdemoappWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :viewdemoapp, ViewdemoappWeb.Endpoint,
+config :user_crud_app, UserCrudAppWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/viewdemoapp_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/user_crud_app_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :viewdemoapp, dev_routes: true
+config :user_crud_app, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

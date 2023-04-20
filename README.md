@@ -1,4 +1,4 @@
-# Viewdemoapp
+# UserCrudApp
 
 To start your Phoenix server:
 

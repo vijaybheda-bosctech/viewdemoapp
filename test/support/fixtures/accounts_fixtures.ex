@@ -1,7 +1,7 @@
-defmodule Viewdemoapp.AccountsFixtures do
+defmodule UserCrudApp.AccountsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Viewdemoapp.Accounts` context.
+  entities via the `UserCrudApp.Accounts` context.
   """
 
   @doc """
@@ -15,7 +15,7 @@ defmodule Viewdemoapp.AccountsFixtures do
         name: "some name",
         phone_number: "some phone_number"
       })
-      |> Viewdemoapp.Accounts.create_user()
+      |> UserCrudApp.Accounts.create_user()
 
     user
   end

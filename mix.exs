@@ -1,9 +1,9 @@
-defmodule Viewdemoapp.MixProject do
+defmodule UserCrudApp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :viewdemoapp,
+      app: :user_crud_app,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Viewdemoapp.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Viewdemoapp.Application, []},
+      mod: {UserCrudApp.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Viewdemoapp.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(UserCrudApp.Repo, :manual)

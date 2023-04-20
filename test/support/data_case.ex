@@ -1,4 +1,4 @@
-defmodule Viewdemoapp.DataCase do
+defmodule UserCrudApp.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Viewdemoapp.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Viewdemoapp.DataCase, async: true`, although
+  by setting `use UserCrudApp.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,17 +18,17 @@ defmodule Viewdemoapp.DataCase do
 
   using do
     quote do
-      alias Viewdemoapp.Repo
+      alias UserCrudApp.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Viewdemoapp.DataCase
+      import UserCrudApp.DataCase
     end
   end
 
   setup tags do
-    Viewdemoapp.DataCase.setup_sandbox(tags)
+    UserCrudApp.DataCase.setup_sandbox(tags)
     :ok
   end
 
@@ -36,7 +36,7 @@ defmodule Viewdemoapp.DataCase do
   Sets up the sandbox based on the test tags.
   """
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Viewdemoapp.Repo, shared: not tags[:async])
+    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(UserCrudApp.Repo, shared: not tags[:async])
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 
