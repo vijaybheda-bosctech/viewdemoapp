@@ -19,6 +19,26 @@ defmodule ViewdemoappWeb do
 
   def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
 
+  def view do
+    quote do
+      use Phoenix.View,
+        root: "lib/viewdemoapp/templates",
+        namespace: ViewdemoappWeb
+
+      # Import convenience functions from controllers
+      import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
+
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
+
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+
+      import ViewdemoappWeb.ErrorHelpers
+      import ViewdemoappWeb.Gettext
+      alias ViewdemoappWeb.Router.Helpers, as: Routes
+    end
+  end
+
   def router do
     quote do
       use Phoenix.Router, helpers: false
