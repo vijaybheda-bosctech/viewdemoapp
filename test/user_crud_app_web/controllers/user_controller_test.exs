@@ -14,7 +14,7 @@ defmodule UserCrudAppWeb.UserControllerTest do
   describe "index" do
     test "lists all users", %{conn: conn} do
       conn = get(conn, ~p"/users")
-      assert html_response(conn, 200) =~ "Listing Users"
+      assert html_response(conn, 200) =~ "Listing all Users"
     end
   end
 
