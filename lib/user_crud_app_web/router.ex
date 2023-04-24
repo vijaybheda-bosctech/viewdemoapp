@@ -20,9 +20,9 @@ defmodule UserCrudAppWeb.Router do
     get("/", PageController, :home)
     resources("/users", UserController)
 
-    resources("/users/new", UserController, only: [:create])
-    resources("/users/:id", UserController, only: [:show])
-    resources("/users/:id/edit", UserController, only: [:edit])
+    # resources("/users/new", UserController, only: [:create])
+    # resources("/users/:id", UserController, only: [:show])
+    # resources("/users/:id/edit", UserController, only: [:edit])
   end
 
   # Other scopes may use custom stacks.
