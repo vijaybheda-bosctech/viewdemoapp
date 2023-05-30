@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :user_crud_app, UserCrudApp.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "admin",
+  password: "Asd@123",
   hostname: "localhost",
   database: "user_crud_app_dev",
   stacktrace: true,
